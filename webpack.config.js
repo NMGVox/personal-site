@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+
  const path = require('path');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
  const ESLintPlugin = require('eslint-webpack-plugin');
@@ -43,10 +45,10 @@
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', { targets: "defaults" }]
-            ]
-          }
-        }
+              ['@babel/preset-env', { targets: 'defaults' }],
+            ],
+          },
+        },
       },
      ],
    },
