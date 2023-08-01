@@ -113,12 +113,39 @@ table {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 25vh;
+    min-height: 50vh;
+    padding-bottom: 2vh;
+    gap: 2vh;
 }
 
 .section-header {
     font-size: 2.5rem;
     text-align: center;
+}
+
+.about-wrapper {
+    display:flex;
+    justify-content: space-around;
+    width: 60vw;
+    min-height: 40vh;
+    background-color: rgba(138, 138, 138, 0.541);
+}
+
+.about-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:100%;
+}
+
+.about-element:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+.about-element-header {
+    font-size: clamp(1.3rem, 1.15vw, 2rem);
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 680px) {

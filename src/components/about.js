@@ -16,6 +16,20 @@ function makeDescription() {
     return descriptionWrapper;
 }
 
+function educationSection() {
+    const educationWrapper = document.createElement('article');
+    educationWrapper.classList.add('about-element');
+    educationWrapper.appendChild(elementHeader('Education'));
+    return educationWrapper;
+}
+
+function hobbySection() {
+    const hobbyWrapper = document.createElement('article');
+    hobbyWrapper.classList.add('about-element');
+    hobbyWrapper.appendChild(elementHeader('Hobbies'));
+    return hobbyWrapper;
+}
+
 export default function createAbout() {
     const aboutSection = document.createElement('section');
     aboutSection.classList.add('about-section');
@@ -30,5 +44,7 @@ export default function createAbout() {
     wrapper.classList.add('about-wrapper');
     aboutSection.appendChild(wrapper);
 
-    aboutSection.appendChild(makeDescription());
+    wrapper.appendChild(makeDescription());
+    wrapper.appendChild(educationSection());
+    wrapper.appendChild(hobbySection());
 }
