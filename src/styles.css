@@ -50,7 +50,6 @@ table {
 /* RESET ENDS */
 
 .intro-container {
-    width: 100vw;
     min-height:100vh;
     background-color: black;
     display: flex;
@@ -97,7 +96,7 @@ table {
 }
 
 .introTextContainer h1 {
-    font-size: clamp(1.5rem, 1.25vw, 2.5rem);
+    font-size: clamp(2rem, 1.65vw, 4rem);
     text-align: center;
 }
 
@@ -113,9 +112,9 @@ table {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 50vh;
-    padding-bottom: 2vh;
-    gap: 2vh;
+    padding-bottom: 4vh;
+    padding-top: 2vh;
+    gap: 1vh;
 }
 
 .section-header {
@@ -128,7 +127,15 @@ table {
     justify-content: space-around;
     width: 60vw;
     min-height: 40vh;
-    background-color: rgba(138, 138, 138, 0.541);
+    background-color: rgba(138, 138, 138, 0);
+    border: 1px solid rgb(68, 2, 88);
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 1320px) {
+    .about-wrapper {
+        width: 70vw;
+    }
 }
 
 .about-element {
@@ -136,23 +143,66 @@ table {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
     padding: 1rem 1rem;
+    gap: clamp(1rem, 1vh, 2rem);
 }
 
 .divider {
     display:inline-block;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid rgb(68, 2, 88);
+    border-right: 1px solid rgb(68, 2, 88);
     align-self: center;
-    height: 32vh;
+    height: 40vh;
 }
 
 .about-element-header {
     font-size: clamp(1.3rem, 1.15vw, 2rem);
+    font-weight: bold;
     text-decoration: underline;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
+}
+
+.edu-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: .5rem;
+    border-radius: 12px;
+}
+
+.edu-wrap:first-of-type {
+    border-bottom: 1px solid rgb(68, 2, 88);
+}
+
+.edu-wrap p {
+    text-align: left;
+}
+
+.edu-info-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.education-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.hobby-list {
+    text-align: left;
+    list-style: circle;
+}
+
+.hobby-list li:not(:last-of-type) {
+    margin-bottom: 1vh;
 }
 
 @media screen and (max-width: 680px) {
@@ -179,5 +229,19 @@ table {
     .introTextContainer h2 {
         font-size: 1.2rem;
         text-align: center;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        width: 60vw;
+    }
+
+    .divider {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid rgb(68, 2, 88);
+        border-bottom: 1px solid rgb(68, 2, 88);
+        height:0px;
+        width: 50vw;
     }
 }
