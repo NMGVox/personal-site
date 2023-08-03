@@ -322,6 +322,43 @@ table {
     font-size: 1rem;
 }
 
+#contact {
+    min-height: 25vh;
+}
+
+.contact-wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper h2 {
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.form-wrapper {
+    display:table;
+    flex-basis: 70%;
+    border-spacing: 1vh;
+}
+
+.form-row {
+    display: table-row;
+}
+
+.form-row label,
+.form-row input,
+.form-row textarea,
+.form-row button {
+    display: table-cell
+}
+
+.form-row label {
+    padding-right: 1vh;
+    vertical-align: top;
+}
+
 @media screen and (max-width: 680px) {
     .intro-container {
         min-height: 50vh;
