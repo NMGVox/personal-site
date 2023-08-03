@@ -13,5 +13,11 @@ module.exports = {
   rules: {
     indent: 'off',
     quotes: 'off',
+    "import/no-extraneous-dependencies": [
+      "warn", {
+          bundledDependencies: false,
+      },
+    ],
+    'no-console': 'off',
   },
 };
