@@ -398,4 +398,8 @@ table {
         height:0px;
         width: 50vw;
     }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
 }
