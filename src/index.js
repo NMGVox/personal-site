@@ -5,12 +5,6 @@ import {
 import './styles.css';
 import createIntro from './components/introduction';
 import populateSkills from './components/populateSkills';
-// import createAbout from './components/about';
-
-window.addEventListener('load', () => {
-  createIntro();
-  //  createAbout();
-});
 
 const firebaseConfig = {
 
@@ -49,4 +43,10 @@ async function grabSkills() {
   }
 }
 
-window.addEventListener('load', grabSkills);
+// eslint-disable-next-line no-unused-vars
+function hasLoaded() {
+  createIntro();
+  grabSkills();
+}
+
+window.addEventListener('load', hasLoaded);

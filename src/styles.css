@@ -104,12 +104,13 @@ table {
 }
 
 .introTextContainer h1 {
-    font-size: clamp(2rem, 1.65vw, 4rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     text-align: center;
+    border-bottom: 1px solid white;
 }
 
 .introTextContainer h2 {
-    font-size: clamp(1.3rem, 1.15vw, 2rem);
+    font-size: clamp(1.3rem, 1.8vw, 3rem);
     text-align: center;
 }
 
@@ -207,6 +208,12 @@ table {
     font-weight: bold;
     text-decoration: underline;
     text-align: left;
+}
+
+.edu-logo {
+    width: clamp(45px, 4vw, 90px);
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
 }
 
 .hobby-list {
@@ -344,6 +351,7 @@ table {
 }
 
 .contact-wrapper h2 {
+    font-size: 1.5rem;
     box-sizing: border-box;
     padding: 1rem;
 }
@@ -351,23 +359,44 @@ table {
 .form-wrapper {
     display:table;
     flex-basis: 70%;
-    border-spacing: 1vh;
+    border-spacing: 1rem;
 }
 
 .form-row {
-    display: table-row;
+    display:flex;
+    align-items: center;
+    gap: 1vw;
 }
 
-.form-row label,
+.form-row p,
 .form-row input,
-.form-row textarea,
+.form-row img,
 .form-row button {
-    display: table-cell
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
-.form-row label {
-    padding-right: 1vh;
-    vertical-align: top;
+.icon-contact-conainer {
+    display: flex;
+    gap: 1vw;
+}
+
+.icon-contact-conainer a {
+    width: clamp(2rem, 1.3vw, 2.5rem);
+    transition: all .3s ease-in;
+}
+
+.icon-contact-conainer a:hover {
+    transform: rotateY(360deg);
+}
+
+.contact-type {
+    width: clamp(50px, 3.5vw, 75px);
+    aspect-ratio: 1 / 1;
+    filter: invert(9%) sepia(85%) saturate(4108%) hue-rotate(280deg) brightness(91%) contrast(123%);
+}
+
+.contact-link {
+    filter: invert(9%) sepia(85%) saturate(4108%) hue-rotate(280deg) brightness(91%) contrast(123%);
 }
 
 @media screen and (max-width: 680px) {
